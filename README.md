@@ -11,3 +11,12 @@ que utilizaremos son:
 - `git add` añade archivos al repositorio
 - `git commit`guarda una versión de los archivos
 - `git push` envía los cambios al repositorio remoto.
+
+## Guardar ca,bios en github
+
+Cada vez que queremos guardar en github:
+
+1. Guardar los cambios en Visual Studios
+2. `git add *`
+3. `git commit -m "mensaje`
+4. `git push origin main`
