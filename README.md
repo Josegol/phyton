@@ -12,7 +12,7 @@ que utilizaremos son:
 - `git commit`guarda una versión de los archivos
 - `git push` envía los cambios al repositorio remoto.
 
-## Guardar ca,bios en github
+## Guardar cambios en github
 
 Cada vez que queremos guardar en github:
 
