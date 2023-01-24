@@ -19,4 +19,4 @@ Cada vez que queremos guardar en github:
 1. Guardar los cambios en Visual Studios
 2. `git add *`
 3. `git commit -m "mensaje`
-4. `git push origin main`
+4. `git push origin main`-
