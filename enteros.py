@@ -22,9 +22,16 @@ print(x**z)
 print("división")
 print(x/z)
 
-a = 2
-b = 5
-c = -3
+a = int(input("Hola, a continuación haremos una ecuación de segundo grado.Dame un número para que sea a."))
+b = int(input("Ahora dime oro número para que sea b."))
+c = int(input("Finalmente dime otro número para que sea c."))
 
- print(-b+math.sqrt(b**2-4*a*c))/(2*a)
- print(-b-math.sqrt(b**2-4*a*c))/(2*a)
+disc=(b**(2)-4*a*c)
+
+if disc<0:
+    print("No tiene solución, prueba con  otros números")
+if disc==0:
+    print((-b+math.sqrt(disc))/(2*a))
+if disc>0:
+     print((-b+math.sqrt(disc))/(2*a))
+     print((-b-math.sqrt(disc))/(2*a))
