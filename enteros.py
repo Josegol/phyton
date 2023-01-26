@@ -32,6 +32,6 @@ if disc<0:
     print("No tiene solución, prueba con  otros números")
 if disc==0:
     print((-b+math.sqrt(disc))/(2*a))
-if disc>0:
+if disc>0: 
      print((-b+math.sqrt(disc))/(2*a))
      print((-b-math.sqrt(disc))/(2*a))
