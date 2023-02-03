@@ -13,9 +13,17 @@ final = False
 
 while not final:
 
-    posicion = int(input("Ahora jugaremos al tres en raya, elige una casilla del 0 al 8"))
+    posicion = int(input("Ahora jugaremos al tres en raya, elige una casilla del 0 al 8. "))
     casillas[posicion]= player
     casillas_libres.remove(posicion)
+    
+    posicion = random.choice(casillas_libres)
+    casillas[posicion] = pc
+    casillas_libres.remove(posicion)
+
+    print(" |  "+casillas[0]+" |  "+casillas[1]+" |  "+casillas[2]+"  | ")
+    print(" |  "+casillas[3]+" |  "+casillas[4]+" |  "+casillas[5]+"  | ")
+    print(" |  "+casillas[6]+" |  "+casillas[7]+" |  "+casillas[8]+"  | ")
 
     if casillas[0] == casillas[1] == casillas[2] == player:
         print("Has ganado!!!") 
@@ -42,10 +50,6 @@ while not final:
         print("Has ganado!!!")
         final = True
 
-posicion = random.choice(casillas_libres)
-casillas[posicion] = pc
-casillas_libres.remove(posicion)
-
     if casillas[0] == casillas[1] == casillas[2] == pc:
         print("Has perdido...")
         final = True
@@ -56,10 +60,10 @@ casillas_libres.remove(posicion)
         print("Has perdido...")
         final = True
     if casillas[0] == casillas[3] == casillas[6] == pc:
-        print("Has perdido")
+        print("Has perdido...")
         final = True
     if casillas[1] == casillas[4] == casillas[7] == pc:
-        print("Has perdido!!!")
+        print("Has perdido...")
         final = True
     if casillas[2] == casillas[5] == casillas[8] == pc:
         print("Has perdido...")
@@ -70,11 +74,6 @@ casillas_libres.remove(posicion)
     if casillas[2] == casillas[4] == casillas[6] == pc:
         print("Has perdido...")
         final = True
-
-
-print("|"+casillas[0]+"|"+casillas[1]+"|"+casillas[2]+"|")
-print("|"+casillas[3]+"|"+casillas[4]+"|"+casillas[5]+"|")
-print("|"+casillas[6]+"|"+casillas[7]+"|"+casillas[8]+"|")
 
 if casillas_libres == []:
     print(Empate)
