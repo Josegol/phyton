@@ -1,6 +1,6 @@
 
 import random
-casillas = ["","","","","","","","",""]
+casillas = [" "," "," "," "," "," "," "," "," "]
 casillas_libres = [0,1,2,3,4,5,6,7,8]
 
 player = input("¿Hola jugador, quieres ser x/o? ")
@@ -17,9 +17,10 @@ while not final:
     casillas[posicion]= player
     casillas_libres.remove(posicion)
     
-    posicion = random.choice(casillas_libres)
-    casillas[posicion] = pc
-    casillas_libres.remove(posicion)
+    if not casillas_libres == []:
+        posicion = random.choice(casillas_libres)
+        casillas[posicion] = pc
+        casillas_libres.remove(posicion)
 
     print(" |  "+casillas[0]+" |  "+casillas[1]+" |  "+casillas[2]+"  | ")
     print(" |  "+casillas[3]+" |  "+casillas[4]+" |  "+casillas[5]+"  | ")
@@ -75,6 +76,3 @@ while not final:
         print("Has perdido...")
         final = True
 
-if casillas_libres == []:
-    print(Empate)
-    final = True
